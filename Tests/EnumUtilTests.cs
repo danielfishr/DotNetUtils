@@ -23,6 +23,27 @@ namespace Tests
             Assert.That(actual,Is.EqualTo(expected));
         }
 
+        [TestCase("Foo", true)]
+        [TestCase("foo", false)]
+        [TestCase(null, false)]
+        public void CanParse_NotIgnoringCase(string text,bool expected)
+        {
+            var actual = EnumUtil.CanParse<Mock>(text);
+
+            Assert.That(actual,Is.EqualTo(expected));
+        }
+
+        [TestCase("Foo", true)]
+        [TestCase("foo", true)]
+        [TestCase(null, false)]
+        [TestCase("hjlkdjdlk", false)]
+        public void CanParse_gnoringCase(string text, bool expected)
+        {
+            var actual = EnumUtil.CanParse<Mock>(text,true);
+
+            Assert.That(actual, Is.EqualTo(expected));
+        }
+
         [TestCase("Foo", Mock.Foo)]
         [TestCase("foo", Mock.Foo)]
         public void Parse_IgnoreCase(string text, Mock expected)

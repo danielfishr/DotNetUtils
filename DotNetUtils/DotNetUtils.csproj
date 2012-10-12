@@ -46,6 +46,7 @@
     <Compile Include="GuidUtil.cs" />
     <Compile Include="InvokeUtil.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RandomUtil.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
