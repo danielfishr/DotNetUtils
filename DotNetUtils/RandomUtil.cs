@@ -8,7 +8,7 @@ namespace DotNetUtils
 
         public static int Next(int inclusiveMinValue, int exclusiveMaxValue)
         {
-            random.Next(inclusiveMinValue,exclusiveMaxValue)
+            return random.Next(inclusiveMinValue,exclusiveMaxValue)
         }
     }
 }
