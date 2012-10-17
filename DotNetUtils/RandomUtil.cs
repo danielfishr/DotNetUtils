@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 namespace DotNetUtils
 {
@@ -15,6 +16,11 @@ namespace DotNetUtils
         public static int Next(int inclusiveMinVal, int exclusiveMaxVal)
         {
             return _random.Next(inclusiveMinVal, exclusiveMaxVal);
+        }
+
+        public static IList<T> From<T>(params T[] ts)
+        {
+            return new List<T>(ts);
         }
     }
 }
