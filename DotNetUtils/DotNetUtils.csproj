@@ -45,6 +45,7 @@
     <Compile Include="EnumUtil.cs" />
     <Compile Include="GuidUtil.cs" />
     <Compile Include="InvokeUtil.cs" />
+    <Compile Include="ListUtil.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RandomUtil.cs" />
   </ItemGroup>
