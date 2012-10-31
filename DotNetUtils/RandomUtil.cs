@@ -1,4 +1,5 @@
 using System;
+using System.Text;
 
 namespace DotNetUtils
 {
@@ -26,6 +27,18 @@ namespace DotNetUtils
         public static double NextDouble()
         {
             return Random.NextDouble();
+        }
+
+        
+        public static string RandomString(int size)
+        {
+            var builder = new StringBuilder();
+            for (int i = 0; i < size; i++)
+            {
+                char ch = Convert.ToChar(Convert.ToInt32(Math.Floor(26*RandomUtil.NextDouble() + 65)));
+                builder.Append(ch);
+            }
+            return builder.ToString();
         }
     }
 }
