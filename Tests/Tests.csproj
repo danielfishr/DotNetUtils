@@ -48,8 +48,10 @@
     <Compile Include="EnumUtilTests.cs" />
     <Compile Include="GuidUtilTests.cs" />
     <Compile Include="InvokeUtilTests.cs" />
+    <Compile Include="PhoneNumberUtilTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RandomUtilTests.cs" />
+    <Compile Include="StringUtilTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

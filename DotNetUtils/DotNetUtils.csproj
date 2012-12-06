@@ -46,8 +46,10 @@
     <Compile Include="GuidUtil.cs" />
     <Compile Include="InvokeUtil.cs" />
     <Compile Include="ListUtil.cs" />
+    <Compile Include="PhoneNumbeUtil.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RandomUtil.cs" />
+    <Compile Include="StringUtil.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
