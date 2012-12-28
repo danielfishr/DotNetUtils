@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EnumUtil.cs" />
+    <Compile Include="FileUtil.cs" />
     <Compile Include="GuidUtil.cs" />
     <Compile Include="InvokeUtil.cs" />
     <Compile Include="ListUtil.cs" />
