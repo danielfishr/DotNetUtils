@@ -13,5 +13,16 @@ namespace Tests
 
             Assert.That(StringUtil.RemoveNoneDigits(str),Is.EqualTo(" abc d e "));
         }
+
+        [TestCase("A",true)]
+        [TestCase("a",true)]
+        [TestCase("ABc", true)]
+        [TestCase("ABc D", true)]
+        [TestCase("ABc d", true)]
+        [TestCase("AbCd", false)]
+        public void StringUtil_WorksFine(string str,bool expected)
+        {
+            Assert.That(StringUtil.IsSplitOnCamelCase(str),Is.EqualTo(expected));
+        }
     }
 }
