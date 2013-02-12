@@ -45,6 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="HashUtilTest.cs" />
     <Compile Include="EnumUtilTests.cs" />
     <Compile Include="GuidUtilTests.cs" />
     <Compile Include="InvokeUtilTests.cs" />
