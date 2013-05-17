@@ -32,5 +32,27 @@ namespace DotNetUtils
             }
             return result;
         }
+
+        public static bool Parsable(object obj)
+        {
+            Guid guid = Guid.NewGuid();
+            return TryParse(obj, guid) != guid;
+        }
+
+        public static Guid TryParse(object authorizationId, Guid defaultTo)
+        {
+            if (authorizationId == null || string.IsNullOrWhiteSpace(authorizationId.ToString()))
+            {
+                return defaultTo;
+            }
+            try
+            {
+                return Parse(authorizationId.ToString());
+            }
+            catch
+            {
+                return defaultTo;
+            }
+        }
     }
 }
