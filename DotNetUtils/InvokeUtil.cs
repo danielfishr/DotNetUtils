@@ -10,7 +10,7 @@ namespace DotNetUtils
 
         public enum CtorSelection
         {
-            MostParams            
+            MostParams
         }
 
         public static T InvokeCtor<T, TDto>(TDto dto, CtorSelection ctorSelection = CtorSelection.MostParams)
@@ -19,7 +19,7 @@ namespace DotNetUtils
             var ctorParams = ctor.GetParameters();
             var dtoProperties = typeof(TDto).GetProperties();
 
-                       var orderedProperties = new List<PropertyInfo>();
+            var orderedProperties = new List<PropertyInfo>();
             foreach (var methodParameter in ctorParams)
             {
                 try
@@ -37,13 +37,13 @@ namespace DotNetUtils
 
             }
 
-            return (T) ctor.Invoke(orderedProperties.Select(x => x.GetValue(dto, null)).ToArray());
+            return (T)ctor.Invoke(orderedProperties.Select(x => x.GetValue(dto, null)).ToArray());
         }
 
         private static ConstructorInfo GetCtorInfo<T, Tdto>()
         {
-            int maxParam = typeof (T).GetConstructors().Max(x => x.GetParameters().Count());
-            var ctor = typeof (T).GetConstructors().FirstOrDefault(x => x.GetParameters().Count() == maxParam);
+            int maxParam = typeof(T).GetConstructors().Max(x => x.GetParameters().Count());
+            var ctor = typeof(T).GetConstructors().FirstOrDefault(x => x.GetParameters().Count() == maxParam);
             return ctor;
         }
 
