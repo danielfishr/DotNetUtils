@@ -40,5 +40,15 @@ namespace DotNetUtils
             }
             return builder.ToString();
         }
+
+        public static int RandomInt()
+        {
+            return Random.Next(0, int.MaxValue);
+        }
+
+        public static string Email()
+        {
+            return string.Format("{0}@{1}.com",RandomString(10), RandomString(10));
+        }
     }
 }
