@@ -49,6 +49,7 @@
     <Compile Include="ListUtil.cs" />
     <Compile Include="HashUtil.cs" />
     <Compile Include="HashingAlgorithm.cs" />
+    <Compile Include="QueryableUtil.cs" />
     <Compile Include="ReflectUtil.cs" />
     <Compile Include="SecurityUtil.cs" />
     <Compile Include="PhoneNumbeUtil.cs" />
