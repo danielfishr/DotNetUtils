@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 
 namespace DotNetUtils
 {
@@ -15,6 +16,11 @@ namespace DotNetUtils
                        {
                            item
                        };
+        }
+
+        public static string FirstNotNullOrWhitespace(params string[] str)
+        {
+            return str.FirstOrDefault(x => !string.IsNullOrWhiteSpace(x));
         }
 
         public static List<T> Join<T>(T item, IEnumerable<T> list)
