@@ -29,5 +29,15 @@ namespace DotNetUtils
             }
             return true;
         }
+
+        public static string TrimToLengthWithPostfix(int len,string input, string postfix)
+        {
+            if (input !=null && input.Length > len)
+            {
+                len = len - (postfix ?? "").Length;
+                return input.Substring(0, len) + postfix;
+            }
+            return input;
+        }
     }
 }
