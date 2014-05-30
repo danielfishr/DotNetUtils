@@ -1,8 +1,9 @@
-using System.Collections.Generic;
-using System.Text.RegularExpressions;
-
 namespace DotNetUtils
 {
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Text.RegularExpressions;
+
     public static class StringUtil
     {
         public static string RemoveNoneDigits(string str)
@@ -30,9 +31,18 @@ namespace DotNetUtils
             return true;
         }
 
-        public static string TrimToLengthWithPostfix(int len,string input, string postfix)
+        public static string FirstNoneEmptyOrWhitespce(params string[] strs)
         {
-            if (input !=null && input.Length > len)
+            if (strs == null)
+            {
+                return null;
+            }
+            return strs.FirstOrDefault(x => !string.IsNullOrWhiteSpace(x));
+        }
+
+        public static string TrimToLengthWithPostfix(int len, string input, string postfix)
+        {
+            if (input != null && input.Length > len)
             {
                 len = len - (postfix ?? "").Length;
                 return input.Substring(0, len) + postfix;
