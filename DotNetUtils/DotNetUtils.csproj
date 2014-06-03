@@ -56,6 +56,7 @@
     <Compile Include="PhoneNumbeUtil.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RandomUtil.cs" />
+    <Compile Include="StartedStopwatch.cs" />
     <Compile Include="StringUtil.cs" />
   </ItemGroup>
   <ItemGroup>
