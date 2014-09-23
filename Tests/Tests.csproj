@@ -60,7 +60,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DotNetUtils\DotNetUtils.csproj">
-      <Project>{7EA7C5CC-3D76-4545-A492-88F8DC9708B3}</Project>
+      <Project>{7ea7c5cc-3d76-4545-a492-88f8dc9708b3}</Project>
       <Name>DotNetUtils</Name>
     </ProjectReference>
   </ItemGroup>

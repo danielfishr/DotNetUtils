@@ -1,7 +1,7 @@
-﻿using System;
-
-namespace DotNetUtils
+﻿namespace DotNetUtils
 {
+    using System;
+
     public static class GuidUtil
     {
         public static Guid Parse(string str)
@@ -37,6 +37,23 @@ namespace DotNetUtils
         {
             Guid guid = Guid.NewGuid();
             return TryParse(obj, guid) != guid;
+        }
+
+
+        public static Guid? TryParse(string s, Guid? @default)
+        {
+            try
+            {
+                if (Parsable(s))
+                {
+                    return Parse(s);
+                }
+            }
+// ReSharper disable once EmptyGeneralCatchClause
+            catch
+            {
+            }
+            return @default;
         }
 
         public static Guid TryParse(object authorizationId, Guid defaultTo)
