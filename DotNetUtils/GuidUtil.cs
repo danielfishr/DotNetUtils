@@ -40,7 +40,7 @@
         }
 
 
-        public static Guid? TryParse(string s, Guid? @default)
+        public static Guid? TryParseAsNullable(string s, Guid? @default)
         {
             try
             {

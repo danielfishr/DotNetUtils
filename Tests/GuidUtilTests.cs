@@ -20,7 +20,7 @@ namespace Tests
         [Test]
         public void Parse_CanReturnNull()
         {
-            Guid? actual = GuidUtil.TryParse("9fd82df0",null);
+            Guid? actual = GuidUtil.TryParseAsNullable("9fd82df0",null);
 
             Assert.That(actual, Is.Null);
         }
