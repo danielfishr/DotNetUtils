@@ -42,6 +42,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DotNetFrameworkContrib\NullDisposable.cs" />
+    <Compile Include="DotNetFrameworkContrib\IEnvironment.cs" />
+    <Compile Include="DotNetFrameworkContrib\RealEnvironmnet.cs" />
     <Compile Include="EnumUtil.cs" />
     <Compile Include="FileUtil.cs" />
     <Compile Include="GuidUtil.cs" />

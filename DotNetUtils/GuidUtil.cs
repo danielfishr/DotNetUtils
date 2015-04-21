@@ -39,6 +39,15 @@
             return TryParse(obj, guid) != guid;
         }
 
+        public static Guid? GetNullableGuid(string guidAsString)
+        {
+            Guid? guid = null;
+            if (Parsable(guidAsString))
+            {
+                guid = GuidUtil.Parse(guidAsString);
+            }
+            return guid;
+        }
 
         public static Guid? TryParseAsNullable(string s, Guid? @default)
         {
